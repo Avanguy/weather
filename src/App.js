@@ -6,6 +6,7 @@ import Forcast from './components/Forcast';
 function App() {
   const [location, setLocation] = useState({lat:51,long:0});
   const [forcast,setForcast] = useState();
+  const [current,setCurrent] = useState();
   // fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.long}&appid=${process.env.REACT_APP_API_KEY}`)
   //   .then((res) => res.json())
   //   .then(data => {
@@ -17,7 +18,6 @@ function App() {
   function initForcast(){
     const data = fetchWeatherJSON();
     data.then(data => setForcast(data));
-    
   }
   useEffect(() => {
     initForcast();
