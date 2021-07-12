@@ -64,7 +64,28 @@ body {
   max-width: 100%;
   height: auto;
 }
-
+.cHour {
+  background-color: darkcyan;
+  border-style: groove;
+  height: 5.5em;
+}
+.cDate {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cWInfo {
+  width: 50%;
+  height: 20em;
+}
+.cHInfo {
+  overflow-y: auto;
+  width: 50%;
+  height: 20em;
+}
+.cDate img {
+  width: 2em;
+  height: auto;
+}
 @keyframes mymove {
   from {
     opacity: 0;
