@@ -1,5 +1,3 @@
-import sun from '.././images/Sun-icon.png';
-
 const FDate = ({fDate,info}) => {
     const displayDate = new Date(fDate);
     const weather = info.weather[0].main;
@@ -41,6 +39,7 @@ const cScheme = (weather) =>{
         case "Clear":
             colours = ["yellow","orange"];
             break;
+
     }
     return colours;
 }

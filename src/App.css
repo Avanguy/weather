@@ -53,14 +53,7 @@ body {
   text-align: left;
   animation: mymove 1s ease-out forwards;
 }
-@keyframes mymove {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 .fDateHighlight {
   width: 100%;
   text-align: center;
@@ -70,4 +63,13 @@ body {
   width: 5em;
   max-width: 100%;
   height: auto;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
