@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CWeather = ({WInfo}) => {
-    console.log(WInfo);
     const sunrise = findTime(WInfo.sunrise).toLocaleString("default", {hour: "2-digit", minute: "2-digit", hour12: false});;
     const sunset = findTime(WInfo.sunset).toLocaleString("default", {hour: "2-digit", minute: "2-digit", hour12: false});;
     const current = findTime(WInfo.dt).toLocaleString("default", {hour: "2-digit", minute: "2-digit", hour12: false});;
@@ -9,7 +8,6 @@ const CWeather = ({WInfo}) => {
     const temp = WInfo.temp;
     const weather = WInfo.weather[0];
     const icon = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
-    console.log(current);
     return (
         <div className = "cWInfo">
             <p>{`Current Time: ${current}`}</p>

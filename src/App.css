@@ -4,16 +4,7 @@
   padding: 0;
   font-family: "Josefin Sans", sans-serif;
 }
-body {
-  background-color: var(--Colour5);
-  color: var(--Colour1);
-}
 :root {
-  --Colour1: #cdc392;
-  --Colour2: #e8e5da;
-  --Colour3: #9eb7e5;
-  --Colour4: #648de5;
-  --Colour5: #304c89;
   overflow-x: hidden;
 }
 .city {
@@ -41,7 +32,6 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  color: black;
 }
 .fDate:hover {
   transform: scale(1.2);
@@ -77,16 +67,16 @@ body {
 .cHour {
   border-style: groove;
   height: 5.5em;
-  background-color: var(--Colour4);
 }
 .cHour:hover {
   cursor: pointer;
   transition: all 0.5s linear;
-  background-color: var(--Colour4);
+  background-color: lightgrey;
 }
 .cHour:focus {
   height: 10em;
-  background-color: var(--Colour4);
+  background-color: lightgrey;
+  cursor: auto;
 }
 .cDate {
   display: flex;
@@ -97,7 +87,13 @@ body {
   height: 20em;
   margin-left: 20%;
 }
-
+.cHour:focus .info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+  animation: mymove 1s ease-out forwards;
+}
 .cHInfo {
   overflow-y: auto;
   width: 30%;
@@ -111,11 +107,35 @@ body {
   width: 10em;
   height: auto;
 }
+.cHourShort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cHourShort img {
+  width: 3em;
+  height: auto;
+}
 @keyframes mymove {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 630px) {
+  .cDate {
+    margin-left: 15%;
+  }
+  .cWInfo {
+    width: 50%;
+  }
+  .cHInfo {
+    width: 50%;
+    margin-left: 15%;
+  }
+  .forcastBox {
+    margin-left: 25%;
   }
 }
