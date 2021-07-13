@@ -5,15 +5,25 @@
   font-family: "Josefin Sans", sans-serif;
 }
 body {
-  background-color: darkgrey;
+  background-color: var(--Colour5);
+  color: var(--Colour1);
+}
+:root {
+  --Colour1: #cdc392;
+  --Colour2: #e8e5da;
+  --Colour3: #9eb7e5;
+  --Colour4: #648de5;
+  --Colour5: #304c89;
+  overflow-x: hidden;
 }
 .city {
   text-align: center;
 }
 .forcastBox {
+  margin-top: 1em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: space-between;
   margin-left: 20%;
   max-width: 60%;
 }
@@ -31,10 +41,10 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
+  color: black;
 }
 .fDate:hover {
   transform: scale(1.2);
-  cursor: pointer;
   height: auto;
   padding-bottom: 1em;
   transition: all 0.5s linear;
@@ -65,25 +75,40 @@ body {
   height: auto;
 }
 .cHour {
-  background-color: darkcyan;
   border-style: groove;
   height: 5.5em;
+  background-color: var(--Colour4);
+}
+.cHour:hover {
+  cursor: pointer;
+  transition: all 0.5s linear;
+  background-color: var(--Colour4);
+}
+.cHour:focus {
+  height: 10em;
+  background-color: var(--Colour4);
 }
 .cDate {
   display: flex;
   flex-wrap: wrap;
 }
 .cWInfo {
-  width: 50%;
+  width: 30%;
   height: 20em;
+  margin-left: 20%;
 }
+
 .cHInfo {
   overflow-y: auto;
-  width: 50%;
+  width: 30%;
   height: 20em;
 }
 .cDate img {
   width: 2em;
+  height: auto;
+}
+.cWInfo img {
+  width: 10em;
   height: auto;
 }
 @keyframes mymove {

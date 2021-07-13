@@ -16,7 +16,7 @@ const Weather = ({forcast}) => {
     return (
         <div> 
             <CDate cHInfo = {cHInfo} cWInfo ={cWInfo}/>
-            <h1  style={{textAlign: "center"}}>Forcast for: {startDate} - {endDate}</h1>
+            <h1  style={{textAlign: "center", marginTop: "1em"}}>Forcast for: {startDate} - {endDate}</h1>
             <div className = "forcastBox"> 
                 {dates.map((fDate,index) => <FDate fDate = {fDate * 1000} info = {info[index]}/>)}
             </div>

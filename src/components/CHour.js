@@ -9,11 +9,11 @@ const CHour = ({info}) => {
     const icon = `http://openweathermap.org/img/wn/${info.weather[0].icon}@2x.png`;
     const weather = info.weather[0].main;
     return (
-        <div className = "cHour">
-            <p style={{color : "gold"}}>{`${nextDay}`}</p>
+        <div tabIndex="0" className = "cHour">
+            <p  style={{textDecoration:" underline"}}>{`${nextDay}`}</p>
             <p>{`${time} ${parseInt(info.feels_like - 273.15)}°C ${weather}`}</p>
             <img src = {icon} alt = {weather} className= "dateImg"/>
-        </div> //make this into css grid
+        </div> 
     )
 }
 const findTime = (epoch)=>{
