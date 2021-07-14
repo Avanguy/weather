@@ -19,7 +19,7 @@ const FDate = ({fDate,info}) => {
     )
 }
 const cScheme = (weather) =>{
-    let colours = ["white","black"];
+    let colours = ["white","grey"];
     switch(weather){
         case "Thunderstorm":
             colours = ["black","yellow"];

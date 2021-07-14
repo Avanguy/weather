@@ -6,12 +6,11 @@ const CHour = ({info}) => {
     const pop = info.pop // probability of percipitation
     const desc = info.weather[0].description;
     let nextDay = "";
-    if(time == "00:00"){    
+    if(time === "00:00"){    
         nextDay = "Next Day";
     }
     const icon = `http://openweathermap.org/img/wn/${info.weather[0].icon}@2x.png`;
     const weather = info.weather[0].main;
-    console.log(info);
     return (
         <div tabIndex="0" className = "cHour">
             <p  style={{textDecoration:" underline", fontWeight:"bold"}}>{`${nextDay}`}</p>

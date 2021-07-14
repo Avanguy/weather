@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Forcast from './components/Forcast';
-// console.log(process.env.REACT_APP_API_KEY);
+ console.log(process.env.REACT_APP_API_KEY);
 
 function App() {
   const [location, setLocation] = useState({lat:51,long:0});
@@ -15,7 +15,7 @@ function App() {
       
   //   })
   function initForcast(){
-    const data = fetchWeatherJSON();
+    const data = fetchWeatherJSON(location);
     data.then(data => setForcast(data));
   }
   useEffect(() => {
@@ -29,8 +29,8 @@ function App() {
     </div>
   );
 }
-async function fetchWeatherJSON(){
-  const res = await fetch("./data.json");
+async function fetchWeatherJSON(location){
+  const res = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.lat}&lon=${location.long}&appid=${process.env.REACT_APP_API_KEY}`);
   const data = await res.json();
   return data
 }
